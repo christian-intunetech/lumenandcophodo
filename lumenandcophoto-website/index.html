@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen &amp; Co. Photo Booth | Elevated photo experiences</title>
+<meta name="description" content="Modern ring-light photo booth rentals for weddings, corporate events and celebrations. Instant prints, digital sharing and custom designs.">
+<link rel="canonical" href="https://lumenandcophoto.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lumen &amp; Co. Photo Booth">
+<meta property="og:description" content="Elevated photo experiences for weddings, corporate events and celebrations.">
+<meta property="og:url" content="https://lumenandcophoto.com/">
+<meta property="og:image" content="https://lumenandcophoto.com/assets/share-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0D1117">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D1117; --slate:#161B22; --slate-2:#1E2329; --line:#2A3038;
+  --lavender:#A78BFA; --lavender-soft:#C4B5FD; --violet:#7C3AED; --royal:#5B21B6;
+  --text:#E6E8EB; --muted:#9CA3AF; --white:#FFFFFF;
+  --radius:16px; --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--ink);color:var(--text);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:var(--lavender)}
+a:hover{color:var(--lavender-soft)}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;color:var(--white);line-height:1.15;margin:0}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:Montserrat,sans-serif;font-weight:600;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--lavender)}
+.section{padding:112px 0}
+.section-head{max-width:640px;margin-bottom:56px;display:grid;gap:14px}
+.section-head h2{font-size:clamp(30px,4vw,42px)}
+.section-head p{color:var(--muted);font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 28px;border-radius:999px;font-family:Montserrat,sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;text-decoration:none;transition:background .2s,border-color .2s,color .2s,box-shadow .2s;cursor:pointer;border:2px solid transparent}
+.btn-primary{background:var(--royal);color:var(--white);box-shadow:0 0 0 0 rgba(167,139,250,0)}
+.btn-primary:hover{background:var(--violet);color:var(--white);box-shadow:0 0 28px rgba(167,139,250,.35)}
+.btn-ghost{border-color:var(--lavender);color:var(--white)}
+.btn-ghost:hover{background:rgba(167,139,250,.12);color:var(--white)}
+:focus-visible{outline:3px solid var(--lavender);outline-offset:3px}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-name{font-family:Montserrat,sans-serif;font-weight:700;font-size:17px;letter-spacing:.16em;color:var(--white);white-space:nowrap}
+.brand-name span{color:var(--lavender)}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500}
+.nav-links a:hover{color:var(--lavender)}
+.nav-links .btn{min-height:42px;padding:0 20px;font-size:14px}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:46px;height:46px;color:var(--white);cursor:pointer;align-items:center;justify-content:center}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:96px 0 104px}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;background:radial-gradient(closest-side,rgba(124,58,237,.28),rgba(124,58,237,0));pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);letter-spacing:-.01em;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--lavender)}
+.hero-lede{font-size:clamp(17px,1.6vw,19px);color:#C9CED6;max-width:520px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-points{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:40px;padding:0;list-style:none;color:var(--muted);font-size:14px}
+.hero-points li{display:flex;align-items:center;gap:8px}
+.hero-points li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lavender);box-shadow:0 0 10px var(--lavender)}
+.hero-art{display:flex;justify-content:center}
+.hero-art svg{width:min(100%,380px);height:auto;filter:drop-shadow(0 0 40px rgba(167,139,250,.35))}
+
+/* Booth features */
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--slate);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.card h3{font-size:19px;margin:18px 0 10px}
+.card p{color:var(--muted);font-size:15px}
+.icon{width:48px;height:48px;border-radius:12px;background:rgba(167,139,250,.12);display:flex;align-items:center;justify-content:center;color:var(--lavender)}
+.icon svg{width:24px;height:24px}
+
+/* Events */
+.alt{background:var(--slate)}
+.events{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.event{border-radius:var(--radius);padding:30px 26px;background:var(--ink);border:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.event .tag{font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--lavender)}
+.event h3{font-size:21px}
+.event p{color:var(--muted);font-size:15px}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:step;list-style:none;padding:0;margin:0}
+.step{position:relative;padding:30px;border-radius:var(--radius);border:1px solid var(--line)}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;color:transparent;-webkit-text-stroke:1.5px var(--lavender);display:block;margin-bottom:12px;line-height:1}
+.step h3{font-size:20px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px}
+
+/* Packages */
+.packages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.package{display:flex;flex-direction:column;gap:18px;padding:34px 30px;border-radius:var(--radius);background:var(--ink);border:1px solid var(--line)}
+.package.featured{border:2px solid var(--lavender);box-shadow:0 0 40px rgba(167,139,250,.15);position:relative}
+.badge{position:absolute;top:-14px;left:30px;background:var(--royal);color:var(--white);font-family:Montserrat,sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;padding:5px 12px;border-radius:999px}
+.package h3{font-size:22px}
+.price-inquire{font-family:Montserrat,sans-serif;font-weight:600;font-size:15px;letter-spacing:.06em;color:var(--lavender);line-height:1.3}
+.price-inquire small{display:block;font-family:Poppins,sans-serif;font-weight:400;font-size:15px;letter-spacing:0;color:var(--muted);margin-top:6px}
+.package ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:15px;flex-grow:1}
+.package li{display:flex;gap:10px;align-items:flex-start}
+.package li svg{flex-shrink:0;margin-top:4px;color:var(--lavender)}
+.package .btn{width:100%}
+.note{margin-top:22px;color:var(--muted);font-size:14px;text-align:center}
+
+/* Instagram band */
+.social-band{text-align:center;padding:96px 0;background:radial-gradient(60% 120% at 50% 0%,rgba(124,58,237,.22),rgba(13,17,23,0) 70%)}
+.social-band h2{font-size:clamp(28px,4vw,40px);margin:14px 0 14px}
+.social-band p{color:var(--muted);max-width:540px;margin:0 auto 30px}
+
+/* FAQ */
+.faq{max-width:820px;display:grid;gap:12px}
+.faq details{background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:0 24px}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;font-family:Montserrat,sans-serif;font-weight:600;font-size:17px;color:var(--white);display:flex;justify-content:space-between;gap:20px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;font-weight:400;color:var(--lavender);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);font-size:15px}
+
+/* Booking */
+.booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.booking-copy{display:grid;gap:18px}
+.booking-copy h2{font-size:clamp(30px,4vw,42px)}
+.booking-copy p{color:var(--muted)}
+.contact-line{display:flex;align-items:center;gap:12px;color:var(--text);font-size:15px}
+.contact-line svg{color:var(--lavender);flex-shrink:0}
+form{background:var(--slate);border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:14px;font-weight:500;color:var(--text)}
+label .opt{color:var(--muted);font-weight:400}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--white);background:var(--ink);border:1px solid #3A4048;border-radius:10px;padding:12px 14px;min-height:48px}
+input::placeholder,textarea::placeholder{color:#6B7280}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A78BFA' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+input[type=date]{color-scheme:dark}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lavender);box-shadow:0 0 0 3px rgba(167,139,250,.25)}
+.hidden{position:absolute;left:-9999px}
+form .btn{grid-column:1/-1;width:100%;min-height:54px;font-size:16px}
+.form-section{grid-column:1/-1;margin:10px 0 -4px;font-family:Montserrat,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--lavender);border-bottom:1px solid var(--line);padding-bottom:10px}
+.form-section:first-of-type{margin-top:0}
+input[type=time]{color-scheme:dark}
+.form-note{grid-column:1/-1;font-size:13px;color:var(--muted);text-align:center}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--line);padding:56px 0 40px}
+.footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;align-items:flex-start}
+.footer-brand{display:grid;gap:12px;max-width:340px}
+.footer-brand p{color:var(--muted);font-size:14px}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px 28px;list-style:none;margin:0;padding:0}
+.footer-links a{color:var(--text);text-decoration:none;font-size:15px}
+.footer-links a:hover{color:var(--lavender)}
+.footer-bottom{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)}
+.footer-bottom a{color:var(--muted)}
+.footer-bottom a:hover{color:var(--lavender)}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-art{order:-1}
+  .hero-art svg{width:220px}
+  .hero-lede{margin:0 auto}
+  .hero-actions,.hero-points{justify-content:center}
+  .features,.packages{grid-template-columns:1fr 1fr}
+  .events{grid-template-columns:1fr 1fr}
+  .booking-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:820px){
+  .menu-toggle{display:inline-flex}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:1px solid var(--line);padding:8px 24px 24px}
+  .nav-links.open{display:flex}
+  .nav-links li a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav-links .btn{margin-top:16px;border-bottom:none;display:flex}
+}
+@media (max-width:640px){
+  .section{padding:80px 0}
+  .hero{padding:40px 0 24px}
+  .hero-art svg{width:150px}
+  .hero-grid{gap:28px}
+  .features,.packages,.events,.steps{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;padding:24px}
+  .brand-name{font-size:15px}
+  .hero-actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Lumen &amp; Co. Photo Booth, home">
+      <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true">
+        <rect x="34" y="10" width="52" height="84" rx="26" fill="none" stroke="#A78BFA" stroke-width="10"/>
+        <rect x="47" y="28" width="26" height="46" rx="3" fill="#1E2329"/>
+        <rect x="56" y="94" width="8" height="15" fill="#FFFFFF"/>
+        <rect x="40" y="108" width="40" height="6" rx="3" fill="#FFFFFF"/>
+      </svg>
+      <span class="brand-name">LUMEN <span>&amp; CO.</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#booth">The Booth</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn btn-primary" href="#inquire">Inquire</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Lumen &amp; Co. Photo Booth</p>
+        <h1>Elevated photo <em>experiences.</em></h1>
+        <p class="hero-lede">A sleek ring-light photo booth that makes every guest look their best. Studio-quality photos, instant sharing and designs made to match your event.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#inquire">Check your date</a>
+          <a class="btn btn-ghost" href="#packages">View packages</a>
+        </div>
+        <ul class="hero-points">
+          <li>Weddings</li>
+          <li>Corporate events</li>
+          <li>Celebrations</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="20 0 80 120" role="img" aria-label="The Lumen &amp; Co. ring-light photo booth">
+          <rect x="34" y="10" width="52" height="84" rx="26" fill="none" stroke="#A78BFA" stroke-opacity="0.18" stroke-width="20"/>
+          <rect x="34" y="10" width="52" height="84" rx="26" fill="none" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="13"/>
+          <rect x="34" y="10" width="52" height="84" rx="26" fill="none" stroke="#C4B5FD" stroke-width="6"/>
+          <rect x="47" y="28" width="26" height="46" rx="3" fill="#1E2329"/>
+          <polygon points="73,28 73,74 47,74" fill="#4B5563"/>
+          <rect x="56" y="94" width="8" height="15" fill="#FFFFFF"/>
+          <rect x="40" y="108" width="40" height="6" rx="3" fill="#FFFFFF"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booth">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The Booth</p>
+        <h2>Flattering light. Effortless fun.</h2>
+        <p>Our modern ring-light booth is built around one idea: everyone should love how they look. It fits into any venue and looks great while it does.</p>
+      </div>
+      <div class="features">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="16" rx="5"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+          <h3>Ring-light glow</h3>
+          <p>Soft, even lighting that smooths skin and brightens every face, no matter the room.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></div>
+          <h3>Instant sharing</h3>
+          <p>Guests send photos straight to their phones by text, email or QR code, right at the booth.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+          <h3>Custom designs</h3>
+          <p>Photo overlays and a welcome screen designed around your names, logo, colors or theme.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+          <h3>Prints on the spot</h3>
+          <p>Add on-site printing so guests leave with a keepsake in hand. Ask about print options.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h3>Online gallery</h3>
+          <p>Every photo from your event, collected in one gallery you can download and share afterward.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Setup handled</h3>
+          <p>We deliver, set up, run the booth and pack it away, so you can enjoy your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="events">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Events</p>
+        <h2>Made for the moments that matter.</h2>
+        <p>From black-tie receptions to company celebrations, the booth adapts to the feel of your event.</p>
+      </div>
+      <div class="events">
+        <div class="event"><span class="tag">I DO</span><h3>Weddings</h3><p>An elegant guest experience and a gallery of candid moments from everyone you love.</p></div>
+        <div class="event"><span class="tag">BRAND</span><h3>Corporate</h3><p>Holiday parties, launches and conferences, with your logo on every photo.</p></div>
+        <div class="event"><span class="tag">CHEERS</span><h3>Celebrations</h3><p>Birthdays, anniversaries, graduations and milestone parties of every size.</p></div>
+        <div class="event"><span class="tag">GALA</span><h3>Community</h3><p>Fundraisers, galas, school dances and church events that bring people together.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Simple from start to finish.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><h3>Reserve your date</h3><p>Send us your event details. We confirm availability and help you choose the right package.</p></li>
+        <li class="step"><h3>Make it yours</h3><p>We design your photo overlay and welcome screen to match your event, and you approve them before the day.</p></li>
+        <li class="step"><h3>Strike a pose</h3><p>We arrive early, set up and run the booth. Guests tap to start, pose and take their photos home.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="packages">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Packages</p>
+        <h2>Choose your experience.</h2>
+        <p>Every package includes delivery, setup and a custom photo overlay. Pricing depends on your date, location and event length, so send us your details for a quote.</p>
+      </div>
+      <div class="packages">
+        <div class="package">
+          <h3>Essentials</h3>
+          <p class="price-inquire">Pricing on request<small>The booth on its own, ready to go</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Standalone ring-light photo booth</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>1 custom graphic overlay</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Instant digital sharing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Online gallery</li>
+          </ul>
+          <a class="btn btn-ghost" href="#inquire" data-package="Essentials">Get Essentials pricing</a>
+        </div>
+        <div class="package featured">
+          <span class="badge">BEST VALUE</span>
+          <h3>Signature</h3>
+          <p class="price-inquire">Pricing on request<small>The complete experience</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Everything in Essentials</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Premium backdrop</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Curated prop collection</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custom branding and overlay</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Your logo on every photo</li>
+          </ul>
+          <a class="btn btn-primary" href="#inquire" data-package="Signature">Get Signature pricing</a>
+        </div>
+        <div class="package">
+          <h3>Premier</h3>
+          <p class="price-inquire">Pricing on request<small>Signature, plus extras</small></p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Everything in Signature</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>On-site printing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Guest album keepsake</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Extended setup window</li>
+          </ul>
+          <a class="btn btn-ghost" href="#inquire" data-package="Premier">Get Premier pricing</a>
+        </div>
+      </div>
+      <p class="note">Need something custom? Mention it in your request and we will put together a quote.</p>
+    </div>
+  </section>
+
+  <section class="social-band">
+    <div class="wrap">
+      <p class="eyebrow">Follow along</p>
+      <h2>See the booth in action.</h2>
+      <p>Photos from recent events, new designs and open dates, all on Instagram.</p>
+      <a class="btn btn-ghost" href="https://www.instagram.com/lumenandcophoto/" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @lumenandcophoto
+      </a>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Good questions.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>How much space does the booth need?</summary>
+          <p>The booth itself has a small footprint. We recommend an area of about 10 by 10 feet so guests have room to gather, pose and use props.</p>
+        </details>
+        <details>
+          <summary>What do you need from the venue?</summary>
+          <p>A standard power outlet near the booth location and a level indoor surface. For outdoor events, the booth needs a covered, shaded spot.</p>
+        </details>
+        <details>
+          <summary>When do you arrive to set up?</summary>
+          <p>We arrive about an hour before your booth time starts, so everything is ready before guests arrive. Setup time is not counted against your package hours.</p>
+        </details>
+        <details>
+          <summary>How do guests get their photos?</summary>
+          <p>Right at the booth, by text, email or QR code. After the event, you receive a link to an online gallery with every photo.</p>
+        </details>
+        <details>
+          <summary>Can the photos be branded for our event?</summary>
+          <p>Yes. Every package includes a custom photo overlay with your names, date or event theme. The Signature package adds full custom branding with your logo.</p>
+        </details>
+        <details>
+          <summary>How do I reserve my date?</summary>
+          <p>Fill out the inquiry form below. We will confirm availability, then hold your date with a signed agreement and deposit.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="inquire">
+    <div class="wrap booking-grid">
+      <div class="booking-copy">
+        <p class="eyebrow">Inquire</p>
+        <h2>Request pricing and availability.</h2>
+        <p>Fill out the inquiry form and we will follow up with package pricing and availability for your date, usually within one business day.</p>
+        <a class="contact-line" href="mailto:info@lumenandcophoto.com">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>
+          info@lumenandcophoto.com
+        </a>
+        <a class="contact-line" href="https://www.instagram.com/lumenandcophoto/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @lumenandcophoto
+        </a>
+      </div>
+
+      <form name="inquiry" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="inquiry">
+        <input type="hidden" name="subject" value="New Lumen &amp; Co. inquiry">
+        <p class="hidden"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <p class="form-section">Your contact info</p>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="organization">Company or organization <span class="opt">(optional)</span></label>
+          <input id="organization" name="organization" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field full">
+          <label for="contact-method">Best way to reach you</label>
+          <select id="contact-method" name="preferred-contact">
+            <option>Email</option>
+            <option>Phone call</option>
+            <option>Text message</option>
+          </select>
+        </div>
+
+        <p class="form-section">Your event</p>
+        <div class="field">
+          <label for="type">Event type</label>
+          <select id="type" name="event-type" required>
+            <option value="" selected disabled>Choose one</option>
+            <option>Wedding</option>
+            <option>Corporate event</option>
+            <option>Birthday or celebration</option>
+            <option>School or community event</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Event date</label>
+          <input id="date" name="event-date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="start">Event start time <span class="opt">(optional)</span></label>
+          <input id="start" name="start-time" type="time">
+        </div>
+        <div class="field">
+          <label for="hours">Booth time needed</label>
+          <select id="hours" name="booth-hours" required>
+            <option value="" selected disabled>Choose one</option>
+            <option>2 hours</option>
+            <option>3 hours</option>
+            <option>4 hours</option>
+            <option>5+ hours</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="venue">Venue name</label>
+          <input id="venue" name="venue" type="text" required>
+        </div>
+        <div class="field">
+          <label for="city">City and state</label>
+          <input id="city" name="city-state" type="text" autocomplete="address-level2" required>
+        </div>
+        <div class="field">
+          <label for="setting">Indoor or outdoor</label>
+          <select id="setting" name="indoor-outdoor">
+            <option>Indoor</option>
+            <option>Outdoor (covered)</option>
+            <option>Outdoor (uncovered)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="guests">Estimated guest count</label>
+          <input id="guests" name="guest-count" type="number" min="1" inputmode="numeric" required>
+        </div>
+
+        <p class="form-section">Your package</p>
+        <div class="field full">
+          <label for="package">Package interested in</label>
+          <select id="package" name="package">
+            <option value="Not sure yet" selected>Not sure yet, help me choose</option>
+            <option value="Essentials">Essentials: standalone booth, 1 custom overlay</option>
+            <option value="Signature">Signature: backdrop, props, custom branding and logo</option>
+            <option value="Premier">Premier</option>
+            <option value="Custom">Something custom</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="heard">How did you hear about us? <span class="opt">(optional)</span></label>
+          <select id="heard" name="referral-source">
+            <option value="" selected>Choose one</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Google search</option>
+            <option>Saw the booth at an event</option>
+            <option>Friend or family</option>
+            <option>Venue or planner</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Event details or questions <span class="opt">(optional)</span></label>
+          <textarea id="message" name="message" placeholder="Theme, colors, logo, special requests"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send inquiry</button>
+        <p class="form-note">No commitment. We will reply with pricing and availability.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Lumen &amp; Co. Photo Booth, back to top">
+          <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true">
+            <rect x="34" y="10" width="52" height="84" rx="26" fill="none" stroke="#A78BFA" stroke-width="10"/>
+            <rect x="47" y="28" width="26" height="46" rx="3" fill="#1E2329"/>
+            <rect x="56" y="94" width="8" height="15" fill="#FFFFFF"/>
+            <rect x="40" y="108" width="40" height="6" rx="3" fill="#FFFFFF"/>
+          </svg>
+          <span class="brand-name">LUMEN <span>&amp; CO.</span></span>
+        </a>
+        <p>Elevated photo experiences for weddings, corporate events and celebrations.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#booth">The Booth</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#inquire">Inquire</a></li>
+        <li><a href="https://www.instagram.com/lumenandcophoto/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Lumen &amp; Co. Photo Booth. All rights reserved.</p>
+      <p>An <a href="https://intunetechnology.com" target="_blank" rel="noopener">Intune Technology Group</a> company</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var links = document.getElementById('nav-links');
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+    });
+    document.querySelectorAll('[data-package]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.getElementById('package').value = btn.getAttribute('data-package');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
